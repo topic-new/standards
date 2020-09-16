@@ -1,15 +1,15 @@
 # RSpec Test Guidelines
 
-RSpec is a DSL for creating testable examples of how code should run. It first
-expresses and scopes tests in an English-like syntax and then executes the
-actual test code; this makes it log-friendly and read/write friendly.
+RSpec is a DSL for testing code. First you scope tests in an English-like
+syntax and then execute the actual test cases; this makes it log-friendly and
+read/write friendly.
 
-Tests deal with permutations of _state_ about a _thing_. The test cycle is
-therefore:
+Remember testing is about dealing with permutations of _state_ about a _thing_.
+The test cycle is therefore:
 
 ```
 (1) You create a thing (object which can be tested).
-(2) Test the thing against some narrow criterion.
+(2) Test the thing against some narrow criteria or criterion.
 (3) Alter the things state.
 (4) Repeat 2 and 3 until all reasonble permutations have been tested.
 ```
@@ -80,7 +80,7 @@ There are three ways a `subject` is defined:
   1. Explicitly.
   2. In a one-liner.
 
-Subject is lazily evaluated meaning it is not computed until it is executed within an `example`. See banged subject (PUT LINK).
+Subject is lazily evaluated meaning it is not computed until it is executed within an `example`. [See banged subject and let](#banged-subject-and-let).
 
 ### Implicit `subject`
 
@@ -191,7 +191,7 @@ end
 ```
 
 You can also **name the explicit subject** by passing a symbol before the block
-which creates a helper method of the same name. This helper method is memoized
+which creates a helper method of the same name. This helper method is memoised
 within the `example` it's scoped to.
 
 ?> **note** `subject` set explicitly with or without a name also sets subject
@@ -226,8 +226,11 @@ end
 ```ruby
 
 ```
-
 </details>
+
+### One-liner
+
+TODO
 
 ### Banged `subject` and `let`
 
@@ -296,6 +299,18 @@ Now suppose we change a single line, calling `let` instead of `subject`. Our
 tests will fail as `let` has not set the implicit subject, meaning
 `expect(subject.do_things)` refers to the User class, not the UserFalseThings
 class. `let` did not, and does not, change the implicit subject.
+</details>
+
+<details>
+  <summary>Equivalency</summary>
+
+In an effort to help with understanding you might consider the following pairs as essentially equivalent (sans differences (1), (2), and (3) mentioned above of course).
+
+```
+      subject { ... } <=> let(:subject) { ... }
+
+subject(:foo) { ... } <=> let(:foo) { ... }
+```
 </details>
 
 
