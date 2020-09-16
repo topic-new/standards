@@ -21,13 +21,12 @@ much less trivial examples over large teams (3+ people) and codebases (~100+
 total lines of code).
 
 ?> _Note_ a team of 3+ people is large because now there is possibility for
-communication to _not_ include someone. With 2 people there is always the other
-part of a conversation. Remember, while you may understand something someone
-else may not, and indeed future you may not either.
+communication to _not_ include someone. With 2 people both are always part of
+the conversation. Remember, while you may understand something someone else may
+not, and indeed future you may not either.
 
-?> _Note_ codebases of ~100 lines or more are defined as large as you, nor
-anyone
-else, can [grok](https://en.wikipedia.org/wiki/Grok) such a large amount.
+?> _Note_ codebases of ~200 lines or more are defined as large as you, nor
+anyone else, can [grok](https://en.wikipedia.org/wiki/Grok) such a large amount.
 
 ?> _Note_ some heretics complain about TypeScript's lack of _true_ static
 typing
