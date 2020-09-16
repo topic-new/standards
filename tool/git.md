@@ -4,8 +4,8 @@ Git is the most commonly used version control system out there. In short its
 principle is that each commit represents the state of the codebase at that point
 in time. Thus for work to be done commits must be made and well... comitted.
 
-Make sure you are familiar with the basic commands, (complete documentation can
-be found here)[https://git-scm.com/docs].
+Make sure you are familiar with the basic commands, [complete documentation can
+be found here](https://git-scm.com/docs).
 
 TODO example commands
 

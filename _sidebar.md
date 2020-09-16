@@ -6,5 +6,6 @@
 - Tooling
 
   - [Git](tool/git.md)
+  - [RSpec](tool/rspec.md)
 
 - [Changelog](CHANGELOG.md)
